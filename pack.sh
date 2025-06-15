@@ -12,7 +12,7 @@ rm -ir publish/*
 PKG_TFM=$1
 VERSION=$(git describe)
 VERSION=${VERSION:1}
-PKG_ROOT="bin/Release/net6.0/$PKG_TFM/publish"
+PKG_ROOT="bin/Release/net8.0/$PKG_TFM/publish"
 dotnet publish -f net6.0 -c Release --self-contained -r $PKG_TFM fvim.fsproj
 
 function pack-linux-x64()
